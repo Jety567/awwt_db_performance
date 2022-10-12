@@ -1,0 +1,56 @@
+{
+  "mongo": {
+    "insert_time": {
+      "time": 7721.141693101078,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 978.1644645996391,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 303546.96324960067,
+      "time_per_command": 303.6,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5684.532831399888,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 55.98267730101943,
+      "time_per_command": 0,
+      "executions": 10000
+    }
+  },
+  "maria": {
+    "insert_time": {
+      "time": 25515.125876700877,
+      "time_per_command": 2.7,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 987.4054221004247,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 192779.50310410262,
+      "time_per_command": 192.7,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 25752.382846500725,
+      "time_per_command": 2.7,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 26313.035877601058,
+      "time_per_command": 3,
+      "executions": 10000
+    }
+  }
+}

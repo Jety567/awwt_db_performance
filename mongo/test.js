@@ -17,6 +17,9 @@ const schema = new Schema({
     password:       String,
 });
 
+const EXECUTION_FULL = 10000;
+const EXECUTION_PART = 1000;
+
 
 const main = async () => {
     try {
@@ -43,34 +46,54 @@ const main = async () => {
                 await newUser.save();
             }
             var endTime = performance.now()
-            let insert_time = Math.round((endTime - startTime) / data.length);
+            let insert_time = {
+                time: (endTime - startTime),
+                time_per_command: Math.round((endTime - startTime) / data.length),
+                executions: data.length,
+            }
 
             mongo_data = await User.find();
 
             startTime = performance.now();
-            for (let i = 0; i < 100; i++) {
-                let data = await User.findById(getRandomID(0,999));
+            for (let i = 0; i < EXECUTION_PART; i++) {
+                let data = await User.findById(getRandomID(0,9999));
             }
             endTime = performance.now()
-            let read_time = Math.round((endTime - startTime) / 100);
+            let read_time = {
+                time: (endTime - startTime),
+                time_per_command: Math.round((endTime - startTime) / EXECUTION_PART),
+                executions: EXECUTION_PART,
+            }
             startTime = performance.now()
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < EXECUTION_PART; i++) {
                 let test = await User.find().sort([['firstname', 'asc'],['lastName', 'asc']]);
             }
             endTime = performance.now()
-            let order_time = Math.round((endTime - startTime) / 100);
+            let order_time = {
+                time: (endTime - startTime),
+                time_per_command: Math.round((endTime - startTime) / EXECUTION_PART),
+                executions: EXECUTION_PART,
+            }
             startTime = performance.now()
-            for (let i = 0; i < 1000; i++) {
+            for (let i = 0; i < EXECUTION_FULL; i++) {
                 const res = await User.updateOne({ id: getRandomID(0,999) }, { firstname: 'TEST' });
             }
             endTime = performance.now()
-            let update_time = Math.round((endTime - startTime) / 1000);
+            let update_time = {
+                time: (endTime - startTime),
+                time_per_command: Math.round((endTime - startTime) / EXECUTION_FULL),
+                executions: EXECUTION_FULL,
+            }
             startTime = performance.now()
             for (let i = 0; i < mongo_data.length; i++) {
                 User.deleteOne({id: mongo_data[i].id})
             }
             endTime = performance.now()
-            let delete_time = Math.round((endTime - startTime) / 1000);
+            let delete_time = {
+                time: (endTime - startTime),
+                time_per_command: Math.round((endTime - startTime) / mongo_data.length),
+                executions: EXECUTION_FULL,
+            }
 
             array.push({
                 insert_time,

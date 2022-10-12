@@ -17,13 +17,13 @@ const fs = require('fs');
 fs.appendFileSync('data.json','[');
 
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 10000; i++) {
     fs.appendFileSync('data.json', JSON.stringify({
         firstname: faker.name.firstName(),
         lastName: faker.name.lastName(),
         birthdate: faker.date.birthdate(),
         addresse: faker.address.streetAddress(),
-        plz: faker.address.zipCode(),
+        plz: faker.address.zipCode("####"),
         city: faker.address.cityName(),
         email: faker.internet.email(),
         password: faker.internet.password(),

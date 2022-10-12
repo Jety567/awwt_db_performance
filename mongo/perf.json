@@ -1,65 +1,272 @@
 [
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 29,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7536.715475998819,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 978.9161980003119,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 303825.0842690021,
+      "time_per_command": 304,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 6638.1337139979005,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 56.40718000382185,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 29,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7866.42915700376,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 1018.662202000618,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 306203.5836919993,
+      "time_per_command": 306,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5505.49567899853,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 56.13207700103521,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 30,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7577.854570999742,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 984.5531779974699,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 307267.6354949996,
+      "time_per_command": 307,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5467.308122999966,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 58.97934000194073,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 29,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7928.605771005154,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 948.9093669950962,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 298705.1394710019,
+      "time_per_command": 299,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5616.008548997343,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 55.12262699753046,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 30,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7703.095169998705,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 974.1754840016365,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 304230.3970900029,
+      "time_per_command": 304,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5559.373185001314,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 55.87527599930763,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 29,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7620.599452994764,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 977.1666099950671,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 302208.50642799586,
+      "time_per_command": 302,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5674.607154004276,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 53.90668199956417,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 30,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7780.294458001852,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 1007.7458069995046,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 302885.7778150067,
+      "time_per_command": 303,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5628.25638499856,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 57.70746700465679,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 33,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7608.158328004181,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 970.6514790058136,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 303760.7984049991,
+      "time_per_command": 304,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5710.792677998543,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 54.6535580009222,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   },
   {
-    "insert_time": 1,
-    "read_time": 1,
-    "order_time": 31,
-    "update_time": 1,
-    "delete_time": 0
+    "insert_time": {
+      "time": 7701.5351369977,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 962.5767330005765,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 305711.00902400166,
+      "time_per_command": 306,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5607.8519930019975,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 54.94070399552584,
+      "time_per_command": 0,
+      "executions": 10000
+    }
+  },
+  {
+    "insert_time": {
+      "time": 7888.129410006106,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "read_time": {
+      "time": 958.2875880002975,
+      "time_per_command": 1,
+      "executions": 1000
+    },
+    "order_time": {
+      "time": 300671.7008069977,
+      "time_per_command": 301,
+      "executions": 1000
+    },
+    "update_time": {
+      "time": 5437.500854000449,
+      "time_per_command": 1,
+      "executions": 10000
+    },
+    "delete_time": {
+      "time": 56.101862005889416,
+      "time_per_command": 0,
+      "executions": 10000
+    }
   }
 ]

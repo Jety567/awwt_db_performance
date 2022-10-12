@@ -4,6 +4,8 @@ const { performance } = require('perf_hooks');
 
 const prisma = new PrismaClient()
 let data = fs.readFileSync('../data/data.json').toString();
+const EXECUTION_FULL = 10000;
+const EXECUTION_PART = 1000;
 data = JSON.parse(data);
 
 const test = async () => {
@@ -16,19 +18,27 @@ const test = async () => {
         })
     }
     var endTime = performance.now()
-    let insert_time = Math.round((endTime - startTime) / data.length);
+    let insert_time = {
+        time: (endTime - startTime),
+        time_per_command: Math.round((endTime - startTime) / data.length),
+        executions: data.length,
+    }
     startTime = performance.now()
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < EXECUTION_PART; i++) {
         const ret = await prisma.post.findMany({
             where: {
-                id: getRandomArbitrary(2,999),
+                id: getRandomArbitrary(2,9999),
             }
         })
     }
     endTime = performance.now()
-    let read_time = Math.round((endTime - startTime) / 100);
+    let read_time = {
+        time: (endTime - startTime),
+        time_per_command: Math.round((endTime - startTime) / EXECUTION_PART),
+        executions: EXECUTION_PART,
+    }
     startTime = performance.now()
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < EXECUTION_PART; i++) {
         const user = await prisma.post.findMany({
             orderBy: [
                 {
@@ -41,12 +51,16 @@ const test = async () => {
         })
     }
     endTime = performance.now()
-    let order_time = Math.round((endTime - startTime) / 100);
+    let order_time = {
+        time: (endTime - startTime),
+        time_per_command: Math.round((endTime - startTime) / EXECUTION_PART),
+        executions: EXECUTION_PART,
+    }
     startTime = performance.now()
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < EXECUTION_FULL; i++) {
         const updateUser = await prisma.post.update({
             where: {
-                id: getRandomArbitrary(10,900),
+                id: getRandomArbitrary(10,9000),
             },
             data: {
                 firstname: 'TEST',
@@ -54,9 +68,13 @@ const test = async () => {
         })
     }
     endTime = performance.now()
-    let update_time = Math.round((endTime - startTime) / 1000);
+    let update_time = {
+        time: (endTime - startTime),
+        time_per_command: Math.round((endTime - startTime) / EXECUTION_FULL),
+        executions: EXECUTION_FULL,
+    }
     startTime = performance.now()
-    for (let i = 1; i <= 1000; i++) {
+    for (let i = 1; i <= EXECUTION_FULL; i++) {
         const deleteUser = await prisma.post.delete({
             where: {
                 id: i,
@@ -64,7 +82,11 @@ const test = async () => {
         })
     }
     endTime = performance.now()
-    let delete_time = Math.round((endTime - startTime) / 1000);
+    let delete_time = {
+        time: (endTime - startTime),
+        time_per_command: Math.round((endTime - startTime) / EXECUTION_FULL),
+        executions: EXECUTION_FULL,
+    }
 
     array.push({
         insert_time,
